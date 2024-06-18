@@ -8,8 +8,9 @@
 ```txt
 Iniziate in modo graduale.
 Prima stampate in pagina i dati, senza preoccuparvi dello stile.
-Dopo aggiungete Bootstrap e mostrate le informazioni con una tabella.
 ```
+
+- Aggiungete Bootstrap e mostrate le informazioni con una tabella.
 
 ## Bonus:
 
@@ -18,3 +19,8 @@ Dopo aggiungete Bootstrap e mostrate le informazioni con una tabella.
    #### NOTA:
    - Deve essere possibile utilizzare entrambi i filtri contemporaneamente (es. ottenere una lista con hotel che dispongono di parcheggio e che hanno un voto di tre stelle o superiore)
    - Se non viene specificato nessun filtro, visualizzare come in precedenza tutti gli hotel.
+
+## Svolgimento:
+
+- Copio l' array degli hotel su index.php
+- Creo un primo foreach per avere a disposizione tutti gli hotel
