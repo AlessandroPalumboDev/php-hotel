@@ -40,6 +40,7 @@
 
     ];
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,9 +52,24 @@
 <body>
     <h1>PHP Hotel</h1>
     <ul>
-        <?php foreach ($hotels as $key => $hotel) : ?>
+        <?php foreach ($hotels as $key => $hotel) : 
+
+                if($hotel['parking']){
+                    $hotel['parking'] = '&check;';
+                }else{
+                     $hotel['parking'] = '&cross;';
+                }
+            
+            ?>
+            
             <li>
                 <?php  echo $key + 1 ?>
+                <ul>
+                    <?php foreach ($hotel as  $info) : ?>
+
+                        <li><?php echo $info ?></li>
+                    <?php endforeach ?>
+                </ul>
 
             </li>
         <?php endforeach ?>

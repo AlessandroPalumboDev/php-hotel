@@ -24,3 +24,4 @@ Prima stampate in pagina i dati, senza preoccuparvi dello stile.
 
 - Copio l' array degli hotel su index.php
 - Creo un primo foreach per avere a disposizione tutti gli hotel
+- Creo un secondo foreach all'interno del primo per la stampa delle info di ogni hotel modificando la visualizzazione del valore booleano
