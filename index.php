@@ -48,33 +48,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Hotel</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>PHP Hotel</h1>
-    <ul>
-        <?php foreach ($hotels as $key => $hotel) : 
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>PHP Hotel</h1>
 
-                if($hotel['parking']){
-                    $hotel['parking'] = '&check;';
-                }else{
-                     $hotel['parking'] = '&cross;';
-                }
-            
-            ?>
-            
-            <li>
-                <?php  echo $key + 1 ?>
-                <ul>
-                    <?php foreach ($hotel as  $info) : ?>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Parking</th>
+                            <th scope="col">Vote</th>
+                            <th scope="col">Distance to center</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($hotels as $key => $hotel) :
 
-                        <li><?php echo $info ?></li>
-                    <?php endforeach ?>
-                </ul>
+                        // sostituisco il  valore booleano con simboli visibili in pagina
+                            if($hotel['parking']){
+                                $hotel['parking'] = '&check;';
+                            }else{
+                                $hotel['parking'] = '&cross;';
+                            }
+                            ?>
 
-            </li>
-        <?php endforeach ?>
+                            <!-- tante righe della tabella quanti sono gli hotel -->
+                            <tr>
+                                <!-- ogni riga ha il numero dell'indice dell'array + 1 -->
+                                <th scope="row"><?php echo $key + 1 ?></th>
 
-    </ul>
+                                <?php foreach ($hotel as  $info) : ?>
+                                    <!-- tante colonne quante sono le info di un hotel -->
+                                    <td><?php echo $info ?></td>
+                                <?php endforeach ?>
+                            </tr>
+                        <?php endforeach ?>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
 
 </body>
 </html>
